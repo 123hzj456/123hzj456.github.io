@@ -448,7 +448,7 @@
 
 <div class="post">
     <a href="/2023/07/26/%E6%88%91%E7%9A%84%E7%AC%AC2%E4%B8%AA%E5%8D%9A%E5%AE%A2/">
-        <h2 class="post-title">我的第2个博客</h2>
+        <h2 class="post-title">利用github搭建博客</h2>
     </a>
     <div class="category-and-date">
         
@@ -464,7 +464,22 @@
     <div class="description">
         <div class="content" v-pre>
             
-            <p>s撒旦啊阿斯顿啊 </p>
+            <h3 id="搭建环境："><a href="#搭建环境：" class="headerlink" title="搭建环境："></a>搭建环境：</h3><h3 id="1-在本地找个目录放博客源文件，注意路径不要有中文"><a href="#1-在本地找个目录放博客源文件，注意路径不要有中文" class="headerlink" title="1.在本地找个目录放博客源文件，注意路径不要有中文"></a>1.在本地找个目录放博客源文件，注意路径不要有中文</h3><h3 id="2-在选定的目录中，右键打开Git-B-H"><a href="#2-在选定的目录中，右键打开Git-B-H" class="headerlink" title="2.在选定的目录中，右键打开Git B H"></a>2.在选定的目录中，右键打开Git B H</h3><h3 id="3-在Git-Bash-Here窗口中输入指令"><a href="#3-在Git-Bash-Here窗口中输入指令" class="headerlink" title="3.在Git Bash Here窗口中输入指令"></a>3.在Git Bash Here窗口中输入指令</h3><p>npm install -g hexo-cli</p>
+<p>hexo init blog</p>
+<p>cd blog</p>
+<p>hexo g</p>
+<h3 id="4-配置ssh"><a href="#4-配置ssh" class="headerlink" title="4.配置ssh"></a>4.配置ssh</h3><h5 id="cd-ssh-检查本机已经存在的ssh密钥（若提示NO-such-file-or-directory则说明是第一次使用git）"><a href="#cd-ssh-检查本机已经存在的ssh密钥（若提示NO-such-file-or-directory则说明是第一次使用git）" class="headerlink" title="cd ~&#x2F;.ssh#检查本机已经存在的ssh密钥（若提示NO such file or directory则说明是第一次使用git）"></a>cd ~&#x2F;.ssh#检查本机已经存在的ssh密钥（若提示NO such file or directory则说明是第一次使用git）</h5><p>ssh-keygen -t rsa -C “邮件地址”     </p>
+<h5 id="并连续三次回车，会生成一个-ssh-id-rsa-pub文件在用户目录下，通过记事本打开并复制里面的内容，在GitHub主页–-个人设置–-SSH-and-GPG-keys–-New-SSH-key-粘贴内容"><a href="#并连续三次回车，会生成一个-ssh-id-rsa-pub文件在用户目录下，通过记事本打开并复制里面的内容，在GitHub主页–-个人设置–-SSH-and-GPG-keys–-New-SSH-key-粘贴内容" class="headerlink" title="并连续三次回车，会生成一个.ssh\id_rsa.pub文件在用户目录下，通过记事本打开并复制里面的内容，在GitHub主页–&gt;个人设置–&gt;SSH and GPG keys–&gt;New SSH key;粘贴内容"></a>并连续三次回车，会生成一个.ssh\id_rsa.pub文件在用户目录下，通过记事本打开并复制里面的内容，在GitHub主页–&gt;个人设置–&gt;SSH and GPG keys–&gt;New SSH key;粘贴内容</h5><h5 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h5><h5 id="ssh-T-x67-105-116-64-x67-x69-x74-x68-x75-x62-46-x63-111-x6d-（注意邮箱地址不用改）和YES"><a href="#ssh-T-x67-105-116-64-x67-x69-x74-x68-x75-x62-46-x63-111-x6d-（注意邮箱地址不用改）和YES" class="headerlink" title="ssh -T &#x67;&#105;&#116;&#64;&#x67;&#x69;&#x74;&#x68;&#x75;&#x62;&#46;&#x63;&#111;&#x6d; # （注意邮箱地址不用改）和YES"></a>ssh -T <a href="mailto:&#x67;&#105;&#116;&#64;&#x67;&#x69;&#x74;&#x68;&#x75;&#x62;&#46;&#x63;&#111;&#x6d;">&#x67;&#105;&#116;&#64;&#x67;&#x69;&#x74;&#x68;&#x75;&#x62;&#46;&#x63;&#111;&#x6d;</a> # （注意邮箱地址不用改）和YES</h5><p>若提示以下内容则成功</p>
+<p><img src="/../../../../../Users/jian/AppData/Roaming/Typora/typora-user-images/image-20230727160832722.png" alt="image-20230727160832722"></p>
+<h5 id="在blog目录下打开cmd-以管理员身份"><a href="#在blog目录下打开cmd-以管理员身份" class="headerlink" title="在blog目录下打开cmd(以管理员身份)"></a>在blog目录下打开cmd(以管理员身份)</h5><p>npm install hexo-deployer-git –save</p>
+<h5 id="继续在Git-B-H中配置"><a href="#继续在Git-B-H中配置" class="headerlink" title="继续在Git B H中配置"></a>继续在Git B H中配置</h5><p>git config –global user.name “luozhixiaowo”&#x2F;&#x2F; 你的github用户名，非昵称<br>git config –global user.email “<a href="mailto:&#120;&#x78;&#x78;&#x40;&#x71;&#113;&#46;&#x63;&#x6f;&#x6d;">&#120;&#x78;&#x78;&#x40;&#x71;&#113;&#46;&#x63;&#x6f;&#x6d;</a>“&#x2F;&#x2F; 填写你的github注册邮箱</p>
+<h3 id="5-准备上传代码"><a href="#5-准备上传代码" class="headerlink" title="5.准备上传代码"></a>5.准备上传代码</h3><h5 id="在github新建一个存储库。命名为-github的用户名-github-io"><a href="#在github新建一个存储库。命名为-github的用户名-github-io" class="headerlink" title="在github新建一个存储库。命名为 github的用户名.github.io"></a>在github新建一个存储库。命名为 <em>github的用户名.github.io</em></h5><h5 id="编辑-config-yml文件，在最后改为"><a href="#编辑-config-yml文件，在最后改为" class="headerlink" title="编辑_config.yml文件，在最后改为"></a>编辑_config.yml文件，在最后改为</h5><p>deploy:<br>type: git<br>repository: <a href="mailto:&#x67;&#105;&#116;&#x40;&#x67;&#105;&#x74;&#x68;&#x75;&#x62;&#x2e;&#99;&#111;&#x6d;">&#x67;&#105;&#116;&#x40;&#x67;&#105;&#x74;&#x68;&#x75;&#x62;&#x2e;&#99;&#111;&#x6d;</a>:luozhixiaowo&#x2F;luozhixiaowo.github.io.git<br>branch: main</p>
+<p>（注意保持格式，若缩进不对则无法上传）</p>
+<p>hexo d 上传文件</p>
+<h3 id="6-hexo-命令介绍"><a href="#6-hexo-命令介绍" class="headerlink" title="6.hexo 命令介绍"></a>6.hexo 命令介绍</h3><p>hexo n “我的博客” &#x3D;&#x3D; hexo new “我的博客” #新建文章<br>hexo new page “pageName” #新建页面<br>hexo g &#x3D;&#x3D; hexo generate #生成<br>hexo s &#x3D;&#x3D; hexo server #启动服务预览<br>hexo d &#x3D;&#x3D; hexo deploy #部署</p>
+<p>hexo server #Hexo会监视文件变动并自动更新，无须重启服务器<br>hexo server -s #静态模式<br>hexo server -p 5000 #更改端口<br>hexo server -i 192.168.1.1 #自定义 IP<br>hexo clean #清除缓存，若是网页正常情况下可以忽略这条命令<br>hexo version #查看Hexo的版本<br>hexo generate #生成静态页面至public目录</p>
+<p>hexo s -g #生成并本地预览<br>hexo d -g #生成并上传</p>
+<h3 id="7-目录结构"><a href="#7-目录结构" class="headerlink" title="7.目录结构"></a>7.目录结构</h3><p>+– .deploy #hexo deploy生成的文件<br>+– node_modules #npm组件<br>+– public #生成的静态网页文件<br>+–scaffolds #模板<br>+– source #博客正文和其他源文件<br>| +– _posts #我们自己写的文章以md结尾<br>+– themes #主题<br>+– _config.yml #全局配置文件<br>– package.json #定义了hexo所需要的各种模块</p>
 
             
         </div>
