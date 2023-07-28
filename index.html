@@ -164,8 +164,8 @@
         
 
 <div class="post">
-    <a href="/2023/07/28/DN%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E7%82%B9/">
-        <h2 class="post-title"></h2>
+    <a href="/2023/07/28/DNS%E5%9F%9F%E5%90%8D%E5%88%86%E7%B1%BB/">
+        <h2 class="post-title">DNS基础知识</h2>
     </a>
     <div class="category-and-date">
         
@@ -181,7 +181,13 @@
     <div class="description">
         <div class="content" v-pre>
             
-            
+            <h1 id="1-域名分类："><a href="#1-域名分类：" class="headerlink" title="1.域名分类："></a>1.域名分类：</h1><h2 id="组织域-采用三个字符的代号，表示DNS域中所包含的组织的主要功能或活动"><a href="#组织域-采用三个字符的代号，表示DNS域中所包含的组织的主要功能或活动" class="headerlink" title="组织域:采用三个字符的代号，表示DNS域中所包含的组织的主要功能或活动"></a>组织域:采用三个字符的代号，表示DNS域中所包含的组织的主要功能或活动</h2><h3 id="工商企业-：-com"><a href="#工商企业-：-com" class="headerlink" title="工商企业  ： .com"></a>工商企业  ： .com</h3><h3 id="网络提供商：-net"><a href="#网络提供商：-net" class="headerlink" title="网络提供商： .net"></a>网络提供商： .net</h3><h3 id="非盈利组织-org"><a href="#非盈利组织-org" class="headerlink" title="非盈利组织:   .org"></a>非盈利组织:   .org</h3><h4 id="教育机构组织：-edu"><a href="#教育机构组织：-edu" class="headerlink" title="教育机构组织：.edu"></a>教育机构组织：.edu</h4><h4 id="政府机构组织：-gov"><a href="#政府机构组织：-gov" class="headerlink" title="政府机构组织：.gov"></a>政府机构组织：.gov</h4><h4 id="军事机构组织：-mil"><a href="#军事机构组织：-mil" class="headerlink" title="军事机构组织：.mil"></a>军事机构组织：.mil</h4><h4 id="国际机构组织：-int"><a href="#国际机构组织：-int" class="headerlink" title="国际机构组织：.int"></a>国际机构组织：.int</h4><h2 id="地址域：-采用两个字符的国家或地区代号"><a href="#地址域：-采用两个字符的国家或地区代号" class="headerlink" title="地址域： 采用两个字符的国家或地区代号"></a>地址域： 采用两个字符的国家或地区代号</h2><h3 id="中国：cn"><a href="#中国：cn" class="headerlink" title="中国：cn"></a>中国：cn</h3><h3 id="韩国：kr"><a href="#韩国：kr" class="headerlink" title="韩国：kr"></a>韩国：kr</h3><h3 id="美国：us"><a href="#美国：us" class="headerlink" title="美国：us"></a>美国：us</h3><h2 id="反向域：in-addr-arpa"><a href="#反向域：in-addr-arpa" class="headerlink" title="反向域：in-addr.arpa"></a>反向域：in-addr.arpa</h2><h4 id="这是一个特殊域，用于将IP地址映射到名字（反向查询）"><a href="#这是一个特殊域，用于将IP地址映射到名字（反向查询）" class="headerlink" title="这是一个特殊域，用于将IP地址映射到名字（反向查询）"></a>这是一个特殊域，用于将IP地址映射到名字（反向查询）</h4><h1 id="2-域名结构"><a href="#2-域名结构" class="headerlink" title="2.域名结构"></a>2.域名结构</h1><h5 id="根域-root-domain-：由于采用树状的分布式结构，显然根域值得是一个结构开始的节点，这里的根域用“-”表示，平时我们的网址ww-baidu-com在配置中应该是www-baidu-com-最后有一点-，一般我们在浏览器输入时会省略后面的点，这已经成为了一种习惯。根域服务器全球有13台，但都不在中国，这些主机的内容都保持一致性。"><a href="#根域-root-domain-：由于采用树状的分布式结构，显然根域值得是一个结构开始的节点，这里的根域用“-”表示，平时我们的网址ww-baidu-com在配置中应该是www-baidu-com-最后有一点-，一般我们在浏览器输入时会省略后面的点，这已经成为了一种习惯。根域服务器全球有13台，但都不在中国，这些主机的内容都保持一致性。" class="headerlink" title="根域(root domain)：由于采用树状的分布式结构，显然根域值得是一个结构开始的节点，这里的根域用“.”表示，平时我们的网址ww.baidu.com在配置中应该是www.baidu.com.(最后有一点)，一般我们在浏览器输入时会省略后面的点，这已经成为了一种习惯。根域服务器全球有13台，但都不在中国，这些主机的内容都保持一致性。"></a>根域(root domain)：由于采用树状的分布式结构，显然根域值得是一个结构开始的节点，这里的根域用“.”表示，平时我们的网址ww.baidu.com在配置中应该是<a target="_blank" rel="noopener" href="http://www.baidu.com.(最后有一点),一般我们在浏览器输入时会省略后面的点,这已经成为了一种习惯.根域服务器全球有13台,但都不在中国,这些主机的内容都保持一致性./">www.baidu.com.(最后有一点)，一般我们在浏览器输入时会省略后面的点，这已经成为了一种习惯。根域服务器全球有13台，但都不在中国，这些主机的内容都保持一致性。</a></h5><h5 id="顶级域（top-level-domain）：根域下面就是顶级域或者叫一级域，有两种划分方式，一种互联网刚兴起时的按照行业性质划分的com-，net-等，一种是按国家划分的如cn-jp-等。"><a href="#顶级域（top-level-domain）：根域下面就是顶级域或者叫一级域，有两种划分方式，一种互联网刚兴起时的按照行业性质划分的com-，net-等，一种是按国家划分的如cn-jp-等。" class="headerlink" title="顶级域（top level domain）：根域下面就是顶级域或者叫一级域，有两种划分方式，一种互联网刚兴起时的按照行业性质划分的com.，net.等，一种是按国家划分的如cn.,jp.,等。"></a>顶级域（top level domain）：根域下面就是顶级域或者叫一级域，有两种划分方式，一种互联网刚兴起时的按照行业性质划分的com.，net.等，一种是按国家划分的如cn.,jp.,等。</h5><h5 id="二级域（注册域）：可以由个人或组织申请注册"><a href="#二级域（注册域）：可以由个人或组织申请注册" class="headerlink" title="二级域（注册域）：可以由个人或组织申请注册"></a>二级域（注册域）：可以由个人或组织申请注册</h5><h6 id="如www-baidu-com-中的-baidu-就是一个二级域名"><a href="#如www-baidu-com-中的-baidu-就是一个二级域名" class="headerlink" title="如www.baidu.com.中的*baidu*就是一个二级域名"></a>如<a target="_blank" rel="noopener" href="http://www.baidu.com.中的*baidu*就是一个二级域名/">www.baidu.com.中的*baidu*就是一个二级域名</a></h6><h5 id="三级域（子域）：服务器网站名的代表"><a href="#三级域（子域）：服务器网站名的代表" class="headerlink" title="三级域（子域）：服务器网站名的代表"></a>三级域（子域）：服务器网站名的代表</h5><h6 id="如www-baidu-com-中的-www-就是一个三级域名"><a href="#如www-baidu-com-中的-www-就是一个三级域名" class="headerlink" title="如www.baidu.com.中的*www*就是一个三级域名"></a>如<a target="_blank" rel="noopener" href="http://www.baidu.com.中的*www*就是一个三级域名/">www.baidu.com.中的*www*就是一个三级域名</a></h6><h5 id="主机名：常用来表示具体的主机"><a href="#主机名：常用来表示具体的主机" class="headerlink" title="主机名：常用来表示具体的主机"></a>主机名：常用来表示具体的主机</h5><h6 id="nsl-www-baidu-com-中的-nsl-就是主机名"><a href="#nsl-www-baidu-com-中的-nsl-就是主机名" class="headerlink" title="nsl.www.baidu.com.中的*nsl*就是主机名"></a>nsl.<a target="_blank" rel="noopener" href="http://www.baidu.com.中的*nsl*就是主机名/">www.baidu.com.中的*nsl*就是主机名</a></h6><h1 id="2-2解析"><a href="#2-2解析" class="headerlink" title="2.2解析"></a>2.2解析</h1><p>正向解析：</p>
+<p>FQDN–&gt;IP,是指域名到IP地址的解析过程。</p>
+<p>反向解析：</p>
+<p>IP–&gt;FQDN,是指IP地址到域名的解析过程，反向解析一般用于邮件服务器，IP反向解析主要应用于邮件服务器中来阻拦垃圾邮件。</p>
+<p>2.3查询过3程</p>
+<p><img src="https://raw.githubusercontent.com/123hzj456/tuku/main/img/202307281117859.jpg" alt="QQ图片20230728111508"></p>
+<h1 id="3-DNS基本原理"><a href="#3-DNS基本原理" class="headerlink" title="3.DNS基本原理"></a>3.DNS基本原理</h1><h4 id="1-当客户机Client需要访问某个域名时，会首先查看本地的hosts文件查询相关记录，如果有则直接解析。"><a href="#1-当客户机Client需要访问某个域名时，会首先查看本地的hosts文件查询相关记录，如果有则直接解析。" class="headerlink" title="1.当客户机Client需要访问某个域名时，会首先查看本地的hosts文件查询相关记录，如果有则直接解析。"></a>1.当客户机Client需要访问某个域名时，会首先查看本地的hosts文件查询相关记录，如果有则直接解析。</h4><h4 id="2-如果在本机hosts文件中没有找到相关记录，则将请求发送至本地DNS域名服务器。"><a href="#2-如果在本机hosts文件中没有找到相关记录，则将请求发送至本地DNS域名服务器。" class="headerlink" title="2.如果在本机hosts文件中没有找到相关记录，则将请求发送至本地DNS域名服务器。"></a>2.如果在本机hosts文件中没有找到相关记录，则将请求发送至本地DNS域名服务器。</h4><h4 id="3-本地DNS服务器接收到请求后会先查询本地缓存localCache如果缓存中存有该项记录则直接返回结果。"><a href="#3-本地DNS服务器接收到请求后会先查询本地缓存localCache如果缓存中存有该项记录则直接返回结果。" class="headerlink" title="3.本地DNS服务器接收到请求后会先查询本地缓存localCache如果缓存中存有该项记录则直接返回结果。"></a>3.本地DNS服务器接收到请求后会先查询本地缓存localCache如果缓存中存有该项记录则直接返回结果。</h4><h4 id="4-如果本地DNS服务器在Local-Cache中未查询到相关信息则本地域名服务器就会直接把请求发送给根域名服务器。"><a href="#4-如果本地DNS服务器在Local-Cache中未查询到相关信息则本地域名服务器就会直接把请求发送给根域名服务器。" class="headerlink" title="4.如果本地DNS服务器在Local Cache中未查询到相关信息则本地域名服务器就会直接把请求发送给根域名服务器。"></a>4.如果本地DNS服务器在Local Cache中未查询到相关信息则本地域名服务器就会直接把请求发送给根域名服务器。</h4><h4 id="5-根服务器通过请求返回给本地DNS服务器一个根子域负责相关域的服务器地址。"><a href="#5-根服务器通过请求返回给本地DNS服务器一个根子域负责相关域的服务器地址。" class="headerlink" title="5.根服务器通过请求返回给本地DNS服务器一个根子域负责相关域的服务器地址。"></a>5.根服务器通过请求返回给本地DNS服务器一个根子域负责相关域的服务器地址。</h4><h4 id="6-本地DNS服务器给根子域的DNS服务器发送请求，相关域服务器在返回给本地DNS一个相关子域服务器然后层层迭代查询。最终得到记录。"><a href="#6-本地DNS服务器给根子域的DNS服务器发送请求，相关域服务器在返回给本地DNS一个相关子域服务器然后层层迭代查询。最终得到记录。" class="headerlink" title="6.本地DNS服务器给根子域的DNS服务器发送请求，相关域服务器在返回给本地DNS一个相关子域服务器然后层层迭代查询。最终得到记录。"></a>6.本地DNS服务器给根子域的DNS服务器发送请求，相关域服务器在返回给本地DNS一个相关子域服务器然后层层迭代查询。最终得到记录。</h4><h4 id="7-本地DNS服务器把返回的发送给客户端，并保存在本地缓存中以备下一次使用。"><a href="#7-本地DNS服务器把返回的发送给客户端，并保存在本地缓存中以备下一次使用。" class="headerlink" title="7.本地DNS服务器把返回的发送给客户端，并保存在本地缓存中以备下一次使用。"></a>7.本地DNS服务器把返回的发送给客户端，并保存在本地缓存中以备下一次使用。</h4><h4 id="8-域名解析完成。"><a href="#8-域名解析完成。" class="headerlink" title="8.域名解析完成。"></a>8.域名解析完成。</h4><h1 id="4常用的资源记录的类型"><a href="#4常用的资源记录的类型" class="headerlink" title="4常用的资源记录的类型"></a>4常用的资源记录的类型</h1><h3 id="SOA-start-of-authority"><a href="#SOA-start-of-authority" class="headerlink" title="SOA(start of authority):"></a>SOA(start of authority):</h3><h4 id="起始授权机构，此记录指定区域的起点。它所包含的信息有区域名、区域管理员电子邮件地址，以及指示辅DNS服务器如何更新区域数据文件的设置等。"><a href="#起始授权机构，此记录指定区域的起点。它所包含的信息有区域名、区域管理员电子邮件地址，以及指示辅DNS服务器如何更新区域数据文件的设置等。" class="headerlink" title="起始授权机构，此记录指定区域的起点。它所包含的信息有区域名、区域管理员电子邮件地址，以及指示辅DNS服务器如何更新区域数据文件的设置等。"></a>起始授权机构，此记录指定区域的起点。它所包含的信息有区域名、区域管理员电子邮件地址，以及指示辅DNS服务器如何更新区域数据文件的设置等。</h4><h3 id="A-address"><a href="#A-address" class="headerlink" title="A(address):"></a>A(address):</h3><h4 id="是用来指定主机名（或域名）对应的IP地址记录，也即是FQDN–IP"><a href="#是用来指定主机名（或域名）对应的IP地址记录，也即是FQDN–IP" class="headerlink" title="是用来指定主机名（或域名）对应的IP地址记录，也即是FQDN–IP"></a>是用来指定主机名（或域名）对应的IP地址记录，也即是FQDN–IP</h4><h3 id="NS-name-server"><a href="#NS-name-server" class="headerlink" title="NS(name server):"></a>NS(name server):</h3><h4 id="此纪录指定负责给定区域的名称服务器。DNS服务器NS记录地址一般以以下的形式出现："><a href="#此纪录指定负责给定区域的名称服务器。DNS服务器NS记录地址一般以以下的形式出现：" class="headerlink" title="此纪录指定负责给定区域的名称服务器。DNS服务器NS记录地址一般以以下的形式出现："></a>此纪录指定负责给定区域的名称服务器。DNS服务器NS记录地址一般以以下的形式出现：</h4><h5 id="ns1-domain-com-ns2-domain-com等。简单的说，NS记录是指定由哪个DNS服务器解析你的域名。"><a href="#ns1-domain-com-ns2-domain-com等。简单的说，NS记录是指定由哪个DNS服务器解析你的域名。" class="headerlink" title="ns1.domain.com     ns2.domain.com等。简单的说，NS记录是指定由哪个DNS服务器解析你的域名。"></a>ns1.domain.com     ns2.domain.com等。简单的说，NS记录是指定由哪个DNS服务器解析你的域名。</h5><h3 id="MX-mail-exchenge"><a href="#MX-mail-exchenge" class="headerlink" title="MX(mail exchenge):"></a>MX(mail exchenge):</h3><h4 id="记录是邮件交换记录，它指向一个邮件服务器，用于电子邮件系统发邮件时根据收信人的地址后缀来定位邮件服务器。例如，当INTERNET上的某用户要发送一封信给user-mydomain-com时，该用户的邮件系统通过DNS查找mydomain-com这个域名的MX记录，如果MX记录存在，用户计算机就将邮件发送到MX记录所指定的邮件服务sss器上。"><a href="#记录是邮件交换记录，它指向一个邮件服务器，用于电子邮件系统发邮件时根据收信人的地址后缀来定位邮件服务器。例如，当INTERNET上的某用户要发送一封信给user-mydomain-com时，该用户的邮件系统通过DNS查找mydomain-com这个域名的MX记录，如果MX记录存在，用户计算机就将邮件发送到MX记录所指定的邮件服务sss器上。" class="headerlink" title="记录是邮件交换记录，它指向一个邮件服务器，用于电子邮件系统发邮件时根据收信人的地址后缀来定位邮件服务器。例如，当INTERNET上的某用户要发送一封信给user@mydomain. com时，该用户的邮件系统通过DNS查找mydomain.com这个域名的MX记录，如果MX记录存在，用户计算机就将邮件发送到MX记录所指定的邮件服务sss器上。"></a>记录是邮件交换记录，它指向一个邮件服务器，用于电子邮件系统发邮件时根据收信人的地址后缀来定位邮件服务器。例如，当INTERNET上的某用户要发送一封信给user@mydomain. com时，该用户的邮件系统通过DNS查找mydomain.com这个域名的MX记录，如果MX记录存在，用户计算机就将邮件发送到MX记录所指定的邮件服务sss器上。</h4><h3 id="CNAME-Canonical-Name"><a href="#CNAME-Canonical-Name" class="headerlink" title="CNAME(Canonical Name):"></a>CNAME(Canonical Name):</h3><h4 id="别名记录，允许您将多个名字映射到同一台计算机。通常用于同时提供WWW和MAIL服务的计算机。例如，有一台计算机名为”host-mydomain-com”-A记录），它同时提供WWW和MAIL服务，为了便于用户访问服务。可以为该计算机设置两个别名-CNAME-WWW和MAIL，这两个别名的全称就“www-mydomain-com”和“mail-mydomain-com”，实际上他们都指向“host-mydomain-com“"><a href="#别名记录，允许您将多个名字映射到同一台计算机。通常用于同时提供WWW和MAIL服务的计算机。例如，有一台计算机名为”host-mydomain-com”-A记录），它同时提供WWW和MAIL服务，为了便于用户访问服务。可以为该计算机设置两个别名-CNAME-WWW和MAIL，这两个别名的全称就“www-mydomain-com”和“mail-mydomain-com”，实际上他们都指向“host-mydomain-com“" class="headerlink" title="别名记录，允许您将多个名字映射到同一台计算机。通常用于同时提供WWW和MAIL服务的计算机。例如，有一台计算机名为”host.mydomain.com”(A记录），它同时提供WWW和MAIL服务，为了便于用户访问服务。可以为该计算机设置两个别名( CNAME ) : WWW和MAIL，这两个别名的全称就“www.mydomain.com”和“mail.mydomain.com”，实际上他们都指向“host.mydomain.com“"></a>别名记录，允许您将多个名字映射到同一台计算机。通常用于同时提供WWW和MAIL服务的计算机。例如，有一台计算机名为”host.mydomain.com”(A记录），它同时提供WWW和MAIL服务，为了便于用户访问服务。可以为该计算机设置两个别名( CNAME ) : WWW和MAIL，这两个别名的全称就“<a target="_blank" rel="noopener" href="http://www.mydomain.com”和“mail.mydomain.com”,实际上他们都指向“host.mydomain.com“/">www.mydomain.com”和“mail.mydomain.com”，实际上他们都指向“host.mydomain.com“</a></h4><h3 id="PTR-pointer"><a href="#PTR-pointer" class="headerlink" title="PTR(pointer):"></a>PTR(pointer):</h3><h4 id="反向查询IP一-FQDN-IP，有特定格式，把IP地址反过来写，1-2-3-4，要写作4-3-2-l-而有特定后缀-in-addr-arpa-，所以完整写法为"><a href="#反向查询IP一-FQDN-IP，有特定格式，把IP地址反过来写，1-2-3-4，要写作4-3-2-l-而有特定后缀-in-addr-arpa-，所以完整写法为" class="headerlink" title="反向查询IP一&gt;FQDN,IP，有特定格式，把IP地址反过来写，1.2.3.4，要写作4.3.2.l ;而有特定后缀:in-addr.arpa.，所以完整写法为:"></a>反向查询IP一&gt;FQDN,IP，有特定格式，把IP地址反过来写，1.2.3.4，要写作4.3.2.l ;而有特定后缀:in-addr.arpa.，所以完整写法为:</h4><h4 id="4-3-2-l-in-add-arpa"><a href="#4-3-2-l-in-add-arpa" class="headerlink" title="4.3.2.l .in-add.arpa."></a>4.3.2.l .in-add.arpa.</h4><h3 id="SRV"><a href="#SRV" class="headerlink" title="SRV:"></a>SRV:</h3><h4 id="添加服务记录服务器服务记录时会添加此项，SRV记录了哪台计算机提供了哪个服务。格式为-服务的名字-协议的类型-例如-example-server-tcp-。"><a href="#添加服务记录服务器服务记录时会添加此项，SRV记录了哪台计算机提供了哪个服务。格式为-服务的名字-协议的类型-例如-example-server-tcp-。" class="headerlink" title="添加服务记录服务器服务记录时会添加此项，SRV记录了哪台计算机提供了哪个服务。格式为:服务的名字.协议的类型(例如:  _example-server._tcp)。"></a>添加服务记录服务器服务记录时会添加此项，SRV记录了哪台计算机提供了哪个服务。格式为:服务的名字.协议的类型(例如:  _example-server._tcp)。</h4><h3 id="AAAA"><a href="#AAAA" class="headerlink" title="AAAA:"></a>AAAA:</h3><h4 id="将主机名（或域名）指向一个IPv6地址（倒如-ff03-0-0-0-0-0-0-cl-，需要添加AAAA记录"><a href="#将主机名（或域名）指向一个IPv6地址（倒如-ff03-0-0-0-0-0-0-cl-，需要添加AAAA记录" class="headerlink" title="将主机名（或域名）指向一个IPv6地址（倒如:ff03:0:0:0:0:0:0:cl) ，需要添加AAAA记录."></a>将主机名（或域名）指向一个IPv6地址（倒如:ff03:0:0:0:0:0:0:cl) ，需要添加AAAA记录.</h4><h3 id="TXT"><a href="#TXT" class="headerlink" title="TXT:"></a>TXT:</h3><h4 id="一般指某个主机名或域名的说明，如-admin-IN-TXT“管理员，电话-XXXXXXXXXXX”-mail-IN-TXT“邮件主机，存放在xxx，管理人-AAA”-Jim-IN-TXT”contact-97-x62-x63-64-109-97-x69-x6c-115-101-x72-x76-101-x72-x2e-x63-111-109-”-也就是您可以设置TXT内容以便使别人联系到您。"><a href="#一般指某个主机名或域名的说明，如-admin-IN-TXT“管理员，电话-XXXXXXXXXXX”-mail-IN-TXT“邮件主机，存放在xxx，管理人-AAA”-Jim-IN-TXT”contact-97-x62-x63-64-109-97-x69-x6c-115-101-x72-x76-101-x72-x2e-x63-111-109-”-也就是您可以设置TXT内容以便使别人联系到您。" class="headerlink" title="一般指某个主机名或域名的说明，如: admin IN TXT“管理员，电话:XXXXXXXXXXX” , mail IN TXT“邮件主机，存放在xxx，管理人:AAA”, Jim IN TXT”contact: &#97;&#x62;&#x63;&#64;&#109;&#97;&#x69;&#x6c;&#115;&#101;&#x72;&#x76;&#101;&#x72;&#x2e;&#x63;&#111;&#109;”,也就是您可以设置TXT内容以便使别人联系到您。"></a>一般指某个主机名或域名的说明，如: admin IN TXT“管理员，电话:XXXXXXXXXXX” , mail IN TXT“邮件主机，存放在xxx，管理人:AAA”, Jim IN TXT”contact: <a href="mailto:&#97;&#x62;&#x63;&#64;&#109;&#97;&#x69;&#x6c;&#115;&#101;&#x72;&#x76;&#101;&#x72;&#x2e;&#x63;&#111;&#109;">&#97;&#x62;&#x63;&#64;&#109;&#97;&#x69;&#x6c;&#115;&#101;&#x72;&#x76;&#101;&#x72;&#x2e;&#x63;&#111;&#109;</a>”,也就是您可以设置TXT内容以便使别人联系到您。</h4><h3 id="TTL-time-to-live"><a href="#TTL-time-to-live" class="headerlink" title="TTL (time to live):"></a>TTL (time to live):</h3><h4 id="简单的说，TTL就是一条域名解析记录在DNS服务器中的存留时间。当各地的DNS服务器接受到解析请求时，就会向域名指定的NS服务器发出解析请求从而获得解析记录-在获得这个记录之后，记录会在DNS服务器中保存一段时间，这段时间内如果再接到这个域名的解析请求，DNS服务器将不再向NS服务器发出请求，而是直接返回刚才获得的记录，而这个记录在DNS服务器上的保留的时间，就是TTL值。"><a href="#简单的说，TTL就是一条域名解析记录在DNS服务器中的存留时间。当各地的DNS服务器接受到解析请求时，就会向域名指定的NS服务器发出解析请求从而获得解析记录-在获得这个记录之后，记录会在DNS服务器中保存一段时间，这段时间内如果再接到这个域名的解析请求，DNS服务器将不再向NS服务器发出请求，而是直接返回刚才获得的记录，而这个记录在DNS服务器上的保留的时间，就是TTL值。" class="headerlink" title="简单的说，TTL就是一条域名解析记录在DNS服务器中的存留时间。当各地的DNS服务器接受到解析请求时，就会向域名指定的NS服务器发出解析请求从而获得解析记录;在获得这个记录之后，记录会在DNS服务器中保存一段时间，这段时间内如果再接到这个域名的解析请求，DNS服务器将不再向NS服务器发出请求，而是直接返回刚才获得的记录，而这个记录在DNS服务器上的保留的时间，就是TTL值。"></a>简单的说，TTL就是一条域名解析记录在DNS服务器中的存留时间。当各地的DNS服务器接受到解析请求时，就会向域名指定的NS服务器发出解析请求从而获得解析记录;在获得这个记录之后，记录会在DNS服务器中保存一段时间，这段时间内如果再接到这个域名的解析请求，DNS服务器将不再向NS服务器发出请求，而是直接返回刚才获得的记录，而这个记录在DNS服务器上的保留的时间，就是TTL值。</h4>
             
         </div>
     </div>
@@ -189,11 +195,11 @@
         
         
     </div>
-    <a href="/2023/07/28/DN%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86%E7%82%B9/" class="go-post">阅读全文</a>
+    <a href="/2023/07/28/DNS%E5%9F%9F%E5%90%8D%E5%88%86%E7%B1%BB/" class="go-post">阅读全文</a>
 </div>
 
 <div class="post">
-    <a href="/2023/07/26/%E5%88%A9%E7%94%A8github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">
+    <a href="/2023/07/27/%E5%88%A9%E7%94%A8github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">
         <h2 class="post-title">利用github搭建博客</h2>
     </a>
     <div class="category-and-date">
@@ -202,7 +208,7 @@
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2023/7/26
+            2023/7/27
         </span>
         
         
@@ -215,11 +221,11 @@
 <p>cd blog</p>
 <p>hexo g</p>
 <h3 id="4-配置ssh"><a href="#4-配置ssh" class="headerlink" title="4.配置ssh"></a>4.配置ssh</h3><h5 id="cd-ssh-检查本机已经存在的ssh密钥（若提示NO-such-file-or-directory则说明是第一次使用git）"><a href="#cd-ssh-检查本机已经存在的ssh密钥（若提示NO-such-file-or-directory则说明是第一次使用git）" class="headerlink" title="cd ~&#x2F;.ssh#检查本机已经存在的ssh密钥（若提示NO such file or directory则说明是第一次使用git）"></a>cd ~&#x2F;.ssh#检查本机已经存在的ssh密钥（若提示NO such file or directory则说明是第一次使用git）</h5><p>ssh-keygen -t rsa -C “邮件地址”     </p>
-<h5 id="并连续三次回车，会生成一个-ssh-id-rsa-pub文件在用户目录下，通过记事本打开并复制里面的内容，在GitHub主页–-个人设置–-SSH-and-GPG-keys–-New-SSH-key-粘贴内容"><a href="#并连续三次回车，会生成一个-ssh-id-rsa-pub文件在用户目录下，通过记事本打开并复制里面的内容，在GitHub主页–-个人设置–-SSH-and-GPG-keys–-New-SSH-key-粘贴内容" class="headerlink" title="并连续三次回车，会生成一个.ssh\id_rsa.pub文件在用户目录下，通过记事本打开并复制里面的内容，在GitHub主页–&gt;个人设置–&gt;SSH and GPG keys–&gt;New SSH key;粘贴内容"></a>并连续三次回车，会生成一个.ssh\id_rsa.pub文件在用户目录下，通过记事本打开并复制里面的内容，在GitHub主页–&gt;个人设置–&gt;SSH and GPG keys–&gt;New SSH key;粘贴内容</h5><h5 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h5><h5 id="ssh-T-x67-x69-x74-x40-103-105-x74-104-x75-x62-46-99-x6f-x6d-（注意邮箱地址不用改）和YES"><a href="#ssh-T-x67-x69-x74-x40-103-105-x74-104-x75-x62-46-99-x6f-x6d-（注意邮箱地址不用改）和YES" class="headerlink" title="ssh -T &#x67;&#x69;&#x74;&#x40;&#103;&#105;&#x74;&#104;&#x75;&#x62;&#46;&#99;&#x6f;&#x6d; # （注意邮箱地址不用改）和YES"></a>ssh -T <a href="mailto:&#x67;&#x69;&#x74;&#x40;&#103;&#105;&#x74;&#104;&#x75;&#x62;&#46;&#99;&#x6f;&#x6d;">&#x67;&#x69;&#x74;&#x40;&#103;&#105;&#x74;&#104;&#x75;&#x62;&#46;&#99;&#x6f;&#x6d;</a> # （注意邮箱地址不用改）和YES</h5><p>若提示以下内容则成功</p>
+<h5 id="并连续三次回车，会生成一个-ssh-id-rsa-pub文件在用户目录下，通过记事本打开并复制里面的内容，在GitHub主页–-个人设置–-SSH-and-GPG-keys–-New-SSH-key-粘贴内容"><a href="#并连续三次回车，会生成一个-ssh-id-rsa-pub文件在用户目录下，通过记事本打开并复制里面的内容，在GitHub主页–-个人设置–-SSH-and-GPG-keys–-New-SSH-key-粘贴内容" class="headerlink" title="并连续三次回车，会生成一个.ssh\id_rsa.pub文件在用户目录下，通过记事本打开并复制里面的内容，在GitHub主页–&gt;个人设置–&gt;SSH and GPG keys–&gt;New SSH key;粘贴内容"></a>并连续三次回车，会生成一个.ssh\id_rsa.pub文件在用户目录下，通过记事本打开并复制里面的内容，在GitHub主页–&gt;个人设置–&gt;SSH and GPG keys–&gt;New SSH key;粘贴内容</h5><h5 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h5><h5 id="ssh-T-x67-x69-116-x40-x67-105-116-x68-x75-98-x2e-x63-111-109-（注意邮箱地址不用改）和YES"><a href="#ssh-T-x67-x69-116-x40-x67-105-116-x68-x75-98-x2e-x63-111-109-（注意邮箱地址不用改）和YES" class="headerlink" title="ssh -T &#x67;&#x69;&#116;&#x40;&#x67;&#105;&#116;&#x68;&#x75;&#98;&#x2e;&#x63;&#111;&#109; # （注意邮箱地址不用改）和YES"></a>ssh -T <a href="mailto:&#x67;&#x69;&#116;&#x40;&#x67;&#105;&#116;&#x68;&#x75;&#98;&#x2e;&#x63;&#111;&#109;">&#x67;&#x69;&#116;&#x40;&#x67;&#105;&#116;&#x68;&#x75;&#98;&#x2e;&#x63;&#111;&#109;</a> # （注意邮箱地址不用改）和YES</h5><p>若提示以下内容则成功</p>
 <p><img src="/../../../../../Users/jian/AppData/Roaming/Typora/typora-user-images/image-20230727160832722.png" alt="image-20230727160832722"></p>
 <h5 id="在blog目录下打开cmd-以管理员身份"><a href="#在blog目录下打开cmd-以管理员身份" class="headerlink" title="在blog目录下打开cmd(以管理员身份)"></a>在blog目录下打开cmd(以管理员身份)</h5><p>npm install hexo-deployer-git –save</p>
-<h5 id="继续在Git-B-H中配置"><a href="#继续在Git-B-H中配置" class="headerlink" title="继续在Git B H中配置"></a>继续在Git B H中配置</h5><p>git config –global user.name “luozhixiaowo”&#x2F;&#x2F; 你的github用户名，非昵称<br>git config –global user.email “<a href="mailto:&#120;&#120;&#120;&#x40;&#113;&#x71;&#x2e;&#x63;&#111;&#109;">&#120;&#120;&#120;&#x40;&#113;&#x71;&#x2e;&#x63;&#111;&#109;</a>“&#x2F;&#x2F; 填写你的github注册邮箱</p>
-<h3 id="5-准备上传代码"><a href="#5-准备上传代码" class="headerlink" title="5.准备上传代码"></a>5.准备上传代码</h3><h5 id="在github新建一个存储库。命名为-github的用户名-github-io"><a href="#在github新建一个存储库。命名为-github的用户名-github-io" class="headerlink" title="在github新建一个存储库。命名为 github的用户名.github.io"></a>在github新建一个存储库。命名为 <em>github的用户名.github.io</em></h5><h5 id="编辑-config-yml文件，在最后改为"><a href="#编辑-config-yml文件，在最后改为" class="headerlink" title="编辑_config.yml文件，在最后改为"></a>编辑_config.yml文件，在最后改为</h5><p>deploy:<br>type: git<br>repository: <a href="mailto:&#103;&#105;&#116;&#64;&#103;&#105;&#116;&#x68;&#117;&#98;&#46;&#99;&#111;&#x6d;">&#103;&#105;&#116;&#64;&#103;&#105;&#116;&#x68;&#117;&#98;&#46;&#99;&#111;&#x6d;</a>:luozhixiaowo&#x2F;luozhixiaowo.github.io.git<br>branch: main</p>
+<h5 id="继续在Git-B-H中配置"><a href="#继续在Git-B-H中配置" class="headerlink" title="继续在Git B H中配置"></a>继续在Git B H中配置</h5><p>git config –global user.name “luozhixiaowo”&#x2F;&#x2F; 你的github用户名，非昵称<br>git config –global user.email “<a href="mailto:&#x78;&#120;&#120;&#64;&#x71;&#x71;&#x2e;&#99;&#111;&#x6d;">&#x78;&#120;&#120;&#64;&#x71;&#x71;&#x2e;&#99;&#111;&#x6d;</a>“&#x2F;&#x2F; 填写你的github注册邮箱</p>
+<h3 id="5-准备上传代码"><a href="#5-准备上传代码" class="headerlink" title="5.准备上传代码"></a>5.准备上传代码</h3><h5 id="在github新建一个存储库。命名为-github的用户名-github-io"><a href="#在github新建一个存储库。命名为-github的用户名-github-io" class="headerlink" title="在github新建一个存储库。命名为 github的用户名.github.io"></a>在github新建一个存储库。命名为 <em>github的用户名.github.io</em></h5><h5 id="编辑-config-yml文件，在最后改为"><a href="#编辑-config-yml文件，在最后改为" class="headerlink" title="编辑_config.yml文件，在最后改为"></a>编辑_config.yml文件，在最后改为</h5><p>deploy:<br>type: git<br>repository: <a href="mailto:&#x67;&#x69;&#116;&#64;&#103;&#105;&#116;&#104;&#117;&#x62;&#46;&#99;&#111;&#109;">&#x67;&#x69;&#116;&#64;&#103;&#105;&#116;&#104;&#117;&#x62;&#46;&#99;&#111;&#109;</a>:luozhixiaowo&#x2F;luozhixiaowo.github.io.git<br>branch: main</p>
 <p>（注意保持格式，若缩进不对则无法上传）</p>
 <p>hexo d 上传文件</p>
 <h3 id="6-hexo-命令介绍"><a href="#6-hexo-命令介绍" class="headerlink" title="6.hexo 命令介绍"></a>6.hexo 命令介绍</h3><p>hexo n “我的博客” &#x3D;&#x3D; hexo new “我的博客” #新建文章<br>hexo new page “pageName” #新建页面<br>hexo g &#x3D;&#x3D; hexo generate #生成<br>hexo s &#x3D;&#x3D; hexo server #启动服务预览<br>hexo d &#x3D;&#x3D; hexo deploy #部署</p>
@@ -234,113 +240,11 @@
         
         
     </div>
-    <a href="/2023/07/26/%E5%88%A9%E7%94%A8github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" class="go-post">阅读全文</a>
+    <a href="/2023/07/27/%E5%88%A9%E7%94%A8github%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" class="go-post">阅读全文</a>
 </div>
 
 <div class="post">
-    <a href="/2023/07/26/DNS%E5%9F%9F%E5%90%8D%E5%88%86%E7%B1%BB/">
-        <h2 class="post-title">DNS基础知识</h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2023/7/26
-        </span>
-        
-        
-    </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <h1 id="1-域名分类："><a href="#1-域名分类：" class="headerlink" title="1.域名分类："></a>1.域名分类：</h1><h2 id="组织域-采用三个字符的代号，表示DNS域中所包含的组织的主要功能或活动"><a href="#组织域-采用三个字符的代号，表示DNS域中所包含的组织的主要功能或活动" class="headerlink" title="组织域:采用三个字符的代号，表示DNS域中所包含的组织的主要功能或活动"></a>组织域:采用三个字符的代号，表示DNS域中所包含的组织的主要功能或活动</h2><h3 id="工商企业-：-com"><a href="#工商企业-：-com" class="headerlink" title="工商企业  ： .com"></a>工商企业  ： .com</h3><h3 id="网络提供商：-net"><a href="#网络提供商：-net" class="headerlink" title="网络提供商： .net"></a>网络提供商： .net</h3><h3 id="非盈利组织-org"><a href="#非盈利组织-org" class="headerlink" title="非盈利组织:   .org"></a>非盈利组织:   .org</h3><h4 id="教育机构组织：-edu"><a href="#教育机构组织：-edu" class="headerlink" title="教育机构组织：.edu"></a>教育机构组织：.edu</h4><h4 id="政府机构组织：-gov"><a href="#政府机构组织：-gov" class="headerlink" title="政府机构组织：.gov"></a>政府机构组织：.gov</h4><h4 id="军事机构组织：-mil"><a href="#军事机构组织：-mil" class="headerlink" title="军事机构组织：.mil"></a>军事机构组织：.mil</h4><h4 id="国际机构组织：-int"><a href="#国际机构组织：-int" class="headerlink" title="国际机构组织：.int"></a>国际机构组织：.int</h4><h2 id="地址域：-采用两个字符的国家或地区代号"><a href="#地址域：-采用两个字符的国家或地区代号" class="headerlink" title="地址域： 采用两个字符的国家或地区代号"></a>地址域： 采用两个字符的国家或地区代号</h2><h3 id="中国：cn"><a href="#中国：cn" class="headerlink" title="中国：cn"></a>中国：cn</h3><h3 id="韩国：kr"><a href="#韩国：kr" class="headerlink" title="韩国：kr"></a>韩国：kr</h3><h3 id="美国：us"><a href="#美国：us" class="headerlink" title="美国：us"></a>美国：us</h3><h2 id="反向域：in-addr-arpa"><a href="#反向域：in-addr-arpa" class="headerlink" title="反向域：in-addr.arpa"></a>反向域：in-addr.arpa</h2><h4 id="这是一个特殊域，用于将IP地址映射到名字（反向查询）"><a href="#这是一个特殊域，用于将IP地址映射到名字（反向查询）" class="headerlink" title="这是一个特殊域，用于将IP地址映射到名字（反向查询）"></a>这是一个特殊域，用于将IP地址映射到名字（反向查询）</h4><h1 id="2-域名结构"><a href="#2-域名结构" class="headerlink" title="2.域名结构"></a>2.域名结构</h1><h5 id="根域-root-domain-：由于采用树状的分布式结构，显然根域值得是一个结构开始的节点，这里的根域用“-”表示，平时我们的网址ww-baidu-com在配置中应该是www-baidu-com-最后有一点-，一般我们在浏览器输入时会省略后面的点，这已经成为了一种习惯。根域服务器全球有13台，但都不在中国，这些主机的内容都保持一致性。"><a href="#根域-root-domain-：由于采用树状的分布式结构，显然根域值得是一个结构开始的节点，这里的根域用“-”表示，平时我们的网址ww-baidu-com在配置中应该是www-baidu-com-最后有一点-，一般我们在浏览器输入时会省略后面的点，这已经成为了一种习惯。根域服务器全球有13台，但都不在中国，这些主机的内容都保持一致性。" class="headerlink" title="根域(root domain)：由于采用树状的分布式结构，显然根域值得是一个结构开始的节点，这里的根域用“.”表示，平时我们的网址ww.baidu.com在配置中应该是www.baidu.com.(最后有一点)，一般我们在浏览器输入时会省略后面的点，这已经成为了一种习惯。根域服务器全球有13台，但都不在中国，这些主机的内容都保持一致性。"></a>根域(root domain)：由于采用树状的分布式结构，显然根域值得是一个结构开始的节点，这里的根域用“.”表示，平时我们的网址ww.baidu.com在配置中应该是<a target="_blank" rel="noopener" href="http://www.baidu.com.(最后有一点),一般我们在浏览器输入时会省略后面的点,这已经成为了一种习惯.根域服务器全球有13台,但都不在中国,这些主机的内容都保持一致性./">www.baidu.com.(最后有一点)，一般我们在浏览器输入时会省略后面的点，这已经成为了一种习惯。根域服务器全球有13台，但都不在中国，这些主机的内容都保持一致性。</a></h5><h5 id="顶级域（top-level-domain）：根域下面就是顶级域或者叫一级域，有两种划分方式，一种互联网刚兴起时的按照行业性质划分的com-，net-等，一种是按国家划分的如cn-jp-等。"><a href="#顶级域（top-level-domain）：根域下面就是顶级域或者叫一级域，有两种划分方式，一种互联网刚兴起时的按照行业性质划分的com-，net-等，一种是按国家划分的如cn-jp-等。" class="headerlink" title="顶级域（top level domain）：根域下面就是顶级域或者叫一级域，有两种划分方式，一种互联网刚兴起时的按照行业性质划分的com.，net.等，一种是按国家划分的如cn.,jp.,等。"></a>顶级域（top level domain）：根域下面就是顶级域或者叫一级域，有两种划分方式，一种互联网刚兴起时的按照行业性质划分的com.，net.等，一种是按国家划分的如cn.,jp.,等。</h5><h5 id="二级域（注册域）：可以由个人或组织申请注册"><a href="#二级域（注册域）：可以由个人或组织申请注册" class="headerlink" title="二级域（注册域）：可以由个人或组织申请注册"></a>二级域（注册域）：可以由个人或组织申请注册</h5><h6 id="如www-baidu-com-中的-baidu-就是一个二级域名"><a href="#如www-baidu-com-中的-baidu-就是一个二级域名" class="headerlink" title="如www.baidu.com.中的*baidu*就是一个二级域名"></a>如<a target="_blank" rel="noopener" href="http://www.baidu.com.中的*baidu*就是一个二级域名/">www.baidu.com.中的*baidu*就是一个二级域名</a></h6><h5 id="三级域（子域）：服务器网站名的代表"><a href="#三级域（子域）：服务器网站名的代表" class="headerlink" title="三级域（子域）：服务器网站名的代表"></a>三级域（子域）：服务器网站名的代表</h5><h6 id="如www-baidu-com-中的-www-就是一个三级域名"><a href="#如www-baidu-com-中的-www-就是一个三级域名" class="headerlink" title="如www.baidu.com.中的*www*就是一个三级域名"></a>如<a target="_blank" rel="noopener" href="http://www.baidu.com.中的*www*就是一个三级域名/">www.baidu.com.中的*www*就是一个三级域名</a></h6><h5 id="主机名：常用来表示具体的主机"><a href="#主机名：常用来表示具体的主机" class="headerlink" title="主机名：常用来表示具体的主机"></a>主机名：常用来表示具体的主机</h5><h6 id="nsl-www-baidu-com-中的-nsl-就是主机名"><a href="#nsl-www-baidu-com-中的-nsl-就是主机名" class="headerlink" title="nsl.www.baidu.com.中的*nsl*就是主机名"></a>nsl.<a target="_blank" rel="noopener" href="http://www.baidu.com.中的*nsl*就是主机名/">www.baidu.com.中的*nsl*就是主机名</a></h6><h1 id="2-2解析"><a href="#2-2解析" class="headerlink" title="2.2解析"></a>2.2解析</h1><p>正向解析：</p>
-<p>FQDN–&gt;IP,是指域名到IP地址的解析过程。</p>
-<p>反向解析：</p>
-<p>IP–&gt;FQDN,是指IP地址到域名的解析过程，反向解析一般用于邮件服务器，IP反向解析主要应用于邮件服务器中来阻拦垃圾邮件。</p>
-<p>2.3查询过3程</p>
-<p><img src="https://raw.githubusercontent.com/123hzj456/tuku/main/img/202307281117859.jpg" alt="QQ图片20230728111508"></p>
-<h1 id="3-DNS基本原理"><a href="#3-DNS基本原理" class="headerlink" title="3.DNS基本原理"></a>3.DNS基本原理</h1><h4 id="1-当客户机Client需要访问某个域名时，会首先查看本地的hosts文件查询相关记录，如果有则直接解析。"><a href="#1-当客户机Client需要访问某个域名时，会首先查看本地的hosts文件查询相关记录，如果有则直接解析。" class="headerlink" title="1.当客户机Client需要访问某个域名时，会首先查看本地的hosts文件查询相关记录，如果有则直接解析。"></a>1.当客户机Client需要访问某个域名时，会首先查看本地的hosts文件查询相关记录，如果有则直接解析。</h4><h4 id="2-如果在本机hosts文件中没有找到相关记录，则将请求发送至本地DNS域名服务器。"><a href="#2-如果在本机hosts文件中没有找到相关记录，则将请求发送至本地DNS域名服务器。" class="headerlink" title="2.如果在本机hosts文件中没有找到相关记录，则将请求发送至本地DNS域名服务器。"></a>2.如果在本机hosts文件中没有找到相关记录，则将请求发送至本地DNS域名服务器。</h4><h4 id="3-本地DNS服务器接收到请求后会先查询本地缓存localCache如果缓存中存有该项记录则直接返回结果。"><a href="#3-本地DNS服务器接收到请求后会先查询本地缓存localCache如果缓存中存有该项记录则直接返回结果。" class="headerlink" title="3.本地DNS服务器接收到请求后会先查询本地缓存localCache如果缓存中存有该项记录则直接返回结果。"></a>3.本地DNS服务器接收到请求后会先查询本地缓存localCache如果缓存中存有该项记录则直接返回结果。</h4><h4 id="4-如果本地DNS服务器在Local-Cache中未查询到相关信息则本地域名服务器就会直接把请求发送给根域名服务器。"><a href="#4-如果本地DNS服务器在Local-Cache中未查询到相关信息则本地域名服务器就会直接把请求发送给根域名服务器。" class="headerlink" title="4.如果本地DNS服务器在Local Cache中未查询到相关信息则本地域名服务器就会直接把请求发送给根域名服务器。"></a>4.如果本地DNS服务器在Local Cache中未查询到相关信息则本地域名服务器就会直接把请求发送给根域名服务器。</h4><h4 id="5-根服务器通过请求返回给本地DNS服务器一个根子域负责相关域的服务器地址。"><a href="#5-根服务器通过请求返回给本地DNS服务器一个根子域负责相关域的服务器地址。" class="headerlink" title="5.根服务器通过请求返回给本地DNS服务器一个根子域负责相关域的服务器地址。"></a>5.根服务器通过请求返回给本地DNS服务器一个根子域负责相关域的服务器地址。</h4><h4 id="6-本地DNS服务器给根子域的DNS服务器发送请求，相关域服务器在返回给本地DNS一个相关子域服务器然后层层迭代查询。最终得到记录。"><a href="#6-本地DNS服务器给根子域的DNS服务器发送请求，相关域服务器在返回给本地DNS一个相关子域服务器然后层层迭代查询。最终得到记录。" class="headerlink" title="6.本地DNS服务器给根子域的DNS服务器发送请求，相关域服务器在返回给本地DNS一个相关子域服务器然后层层迭代查询。最终得到记录。"></a>6.本地DNS服务器给根子域的DNS服务器发送请求，相关域服务器在返回给本地DNS一个相关子域服务器然后层层迭代查询。最终得到记录。</h4><h4 id="7-本地DNS服务器把返回的发送给客户端，并保存在本地缓存中以备下一次使用。"><a href="#7-本地DNS服务器把返回的发送给客户端，并保存在本地缓存中以备下一次使用。" class="headerlink" title="7.本地DNS服务器把返回的发送给客户端，并保存在本地缓存中以备下一次使用。"></a>7.本地DNS服务器把返回的发送给客户端，并保存在本地缓存中以备下一次使用。</h4><h4 id="8-域名解析完成。"><a href="#8-域名解析完成。" class="headerlink" title="8.域名解析完成。"></a>8.域名解析完成。</h4>
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        
-    </div>
-    <a href="/2023/07/26/DNS%E5%9F%9F%E5%90%8D%E5%88%86%E7%B1%BB/" class="go-post">阅读全文</a>
-</div>
-
-<div class="post">
-    <a href="/2023/07/26/test-my-site/">
-        <h2 class="post-title">test_my_site</h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2023/7/26
-        </span>
-        
-        
-    </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        
-    </div>
-    <a href="/2023/07/26/test-my-site/" class="go-post">阅读全文</a>
-</div>
-
-<div class="post">
-    <a href="/2023/07/26/%E5%A6%82%E4%BD%95%E5%B0%86%E5%9B%BE%E7%89%87%E5%8F%91%E9%80%81%E5%88%B0%E5%8D%9A%E5%AE%A2%E4%B8%AD/">
-        <h2 class="post-title">如何将图片上传至博客</h2>
-    </a>
-    <div class="category-and-date">
-        
-        <span class="date">
-            <span class="icon">
-                <i class="fa-solid fa-calendar fa-fw"></i>
-            </span>
-            2023/7/26
-        </span>
-        
-        
-    </div>
-    <div class="description">
-        <div class="content" v-pre>
-            
-            <h3 id="准备工具：下载软件PICGO"><a href="#准备工具：下载软件PICGO" class="headerlink" title="准备工具：下载软件PICGO"></a>准备工具：下载软件PICGO</h3><h5 id="1-将软件设置为时间重命名"><a href="#1-将软件设置为时间重命名" class="headerlink" title="1.将软件设置为时间重命名"></a>1.将软件设置为时间重命名</h5><h5 id="2-图床设置为Github"><a href="#2-图床设置为Github" class="headerlink" title="2.图床设置为Github"></a>2.图床设置为Github</h5><h5 id="3-配置GIThub"><a href="#3-配置GIThub" class="headerlink" title="3.配置GIThub"></a>3.配置GIThub</h5><p><img src="/../../../../../Users/jian/AppData/Roaming/Typora/typora-user-images/image-20230727165325349.png" alt="image-20230727165325349"></p>
-<p>仓库名为GitHub用户名&#x2F;存储仓库名</p>
-<p>分支固定为Main</p>
-<p>token设置方法为：</p>
-<p>在GitHub页面点开设置-&gt;左侧最后一栏-&gt;第三栏第2个–&gt;新建一个密钥复制Token 值粘贴到该位置</p>
-<p>存储路径：在本地新建一个文件用于存储图片并将文件名写入该栏内</p>
-<p>最后保存即可</p>
-<h4 id="5-设置typora文件"><a href="#5-设置typora文件" class="headerlink" title="5.设置typora文件"></a>5.设置typora文件</h4><h4 id="在typora文件设置中"><a href="#在typora文件设置中" class="headerlink" title="在typora文件设置中"></a>在typora文件设置中</h4><p><img src="/image-20230727170350899.png" alt="image-20230727170350899"></p>
-<p>进行如上设置，验证图片上传后显示成功即完成</p>
-
-            
-        </div>
-    </div>
-    <div class="post-tags">
-        
-        
-    </div>
-    <a href="/2023/07/26/%E5%A6%82%E4%BD%95%E5%B0%86%E5%9B%BE%E7%89%87%E5%8F%91%E9%80%81%E5%88%B0%E5%8D%9A%E5%AE%A2%E4%B8%AD/" class="go-post">阅读全文</a>
-</div>
-
-<div class="post">
-    <a href="/2023/07/26/%E9%87%8D%E8%A6%81%E7%AB%AF%E5%8F%A3%E5%8F%8A%E6%9C%8D%E5%8A%A1%E9%80%9F%E6%9F%A5/">
+    <a href="/2023/07/27/%E9%87%8D%E8%A6%81%E7%AB%AF%E5%8F%A3%E5%8F%8A%E6%9C%8D%E5%8A%A1%E9%80%9F%E6%9F%A5/">
         <h2 class="post-title">重要端口及服务</h2>
     </a>
     <div class="category-and-date">
@@ -349,7 +253,7 @@
             <span class="icon">
                 <i class="fa-solid fa-calendar fa-fw"></i>
             </span>
-            2023/7/26
+            2023/7/27
         </span>
         
         
@@ -619,7 +523,74 @@
         
         
     </div>
-    <a href="/2023/07/26/%E9%87%8D%E8%A6%81%E7%AB%AF%E5%8F%A3%E5%8F%8A%E6%9C%8D%E5%8A%A1%E9%80%9F%E6%9F%A5/" class="go-post">阅读全文</a>
+    <a href="/2023/07/27/%E9%87%8D%E8%A6%81%E7%AB%AF%E5%8F%A3%E5%8F%8A%E6%9C%8D%E5%8A%A1%E9%80%9F%E6%9F%A5/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2023/07/26/test-my-site/">
+        <h2 class="post-title">test_my_site</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/7/26
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+    </div>
+    <a href="/2023/07/26/test-my-site/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2023/07/26/%E5%A6%82%E4%BD%95%E5%B0%86%E5%9B%BE%E7%89%87%E5%8F%91%E9%80%81%E5%88%B0%E5%8D%9A%E5%AE%A2%E4%B8%AD/">
+        <h2 class="post-title">如何将图片上传至博客</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/7/26
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h3 id="准备工具：下载软件PICGO"><a href="#准备工具：下载软件PICGO" class="headerlink" title="准备工具：下载软件PICGO"></a>准备工具：下载软件PICGO</h3><h5 id="1-将软件设置为时间重命名"><a href="#1-将软件设置为时间重命名" class="headerlink" title="1.将软件设置为时间重命名"></a>1.将软件设置为时间重命名</h5><h5 id="2-图床设置为Github"><a href="#2-图床设置为Github" class="headerlink" title="2.图床设置为Github"></a>2.图床设置为Github</h5><h5 id="3-配置GIThub"><a href="#3-配置GIThub" class="headerlink" title="3.配置GIThub"></a>3.配置GIThub</h5><p><img src="/../../../../../Users/jian/AppData/Roaming/Typora/typora-user-images/image-20230727165325349.png" alt="image-20230727165325349"></p>
+<p>仓库名为GitHub用户名&#x2F;存储仓库名</p>
+<p>分支固定为Main</p>
+<p>token设置方法为：</p>
+<p>在GitHub页面点开设置-&gt;左侧最后一栏-&gt;第三栏第2个–&gt;新建一个密钥复制Token 值粘贴到该位置</p>
+<p>存储路径：在本地新建一个文件用于存储图片并将文件名写入该栏内</p>
+<p>最后保存即可</p>
+<h4 id="5-设置typora文件"><a href="#5-设置typora文件" class="headerlink" title="5.设置typora文件"></a>5.设置typora文件</h4><h4 id="在typora文件设置中"><a href="#在typora文件设置中" class="headerlink" title="在typora文件设置中"></a>在typora文件设置中</h4><p><img src="/image-20230727170350899.png" alt="image-20230727170350899"></p>
+<p>进行如上设置，验证图片上传后显示成功即完成</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+    </div>
+    <a href="/2023/07/26/%E5%A6%82%E4%BD%95%E5%B0%86%E5%9B%BE%E7%89%87%E5%8F%91%E9%80%81%E5%88%B0%E5%8D%9A%E5%AE%A2%E4%B8%AD/" class="go-post">阅读全文</a>
 </div>
 
 <div class="post">
