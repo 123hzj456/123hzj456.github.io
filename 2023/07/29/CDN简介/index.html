@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>CDN简介 | Hexo</title>
+        <meta name="author" content="John Doe" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <link rel="icon" href="/images/favicon.png" />
+        <script src="https://cdn.staticfile.org/vue/3.3.4/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.0/css/all.min.css" />
+<link rel="stylesheet" href="/css/fonts.min.css" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.8.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.8.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+    <meta name="generator" content="Hexo 6.3.0"></head>
+    <body>
+        <div id="layout">
+            <transition name="fade">
+                <div id="loading" v-show="loading">
+                    <div id="loading-circle">
+                        <h2>LOADING</h2>
+                        <p>加载过慢请开启缓存 浏览器默认开启</p>
+                        <img src="/images/loading.gif" />
+                    </div>
+                </div>
+            </transition>
+            <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>HEXO</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;HEXO</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+            <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+                <div class="article">
+    <div>
+        <h1>CDN简介</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/7/29
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <h1 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h1><h3 id="CDN也叫内容分发网络。其目的是通过现有的Internet中增加一层新的网络架构，将网站的内容发布到最接近用户的网络边缘，使用户可以就近取得所需的内容，提高用户访问网站的响应速度，CDN-更智能的镜像-缓存-流量导流。因而CDN可以明显提高Internet网络中信息流动的效率，从技术上全面解决由于网络带宽小，用户访问量大，网点分布不均等问题，提高用户访问网站的响应速度。"><a href="#CDN也叫内容分发网络。其目的是通过现有的Internet中增加一层新的网络架构，将网站的内容发布到最接近用户的网络边缘，使用户可以就近取得所需的内容，提高用户访问网站的响应速度，CDN-更智能的镜像-缓存-流量导流。因而CDN可以明显提高Internet网络中信息流动的效率，从技术上全面解决由于网络带宽小，用户访问量大，网点分布不均等问题，提高用户访问网站的响应速度。" class="headerlink" title="CDN也叫内容分发网络。其目的是通过现有的Internet中增加一层新的网络架构，将网站的内容发布到最接近用户的网络边缘，使用户可以就近取得所需的内容，提高用户访问网站的响应速度，CDN&#x3D;更智能的镜像+缓存+流量导流。因而CDN可以明显提高Internet网络中信息流动的效率，从技术上全面解决由于网络带宽小，用户访问量大，网点分布不均等问题，提高用户访问网站的响应速度。"></a>CDN也叫内容分发网络。其目的是通过现有的Internet中增加一层新的网络架构，将网站的内容发布到最接近用户的网络边缘，使用户可以就近取得所需的内容，提高用户访问网站的响应速度，CDN&#x3D;更智能的镜像+缓存+流量导流。因而CDN可以明显提高Internet网络中信息流动的效率，从技术上全面解决由于网络带宽小，用户访问量大，网点分布不均等问题，提高用户访问网站的响应速度。</h3><h1 id="2-工作流程"><a href="#2-工作流程" class="headerlink" title="2.工作流程"></a>2.工作流程</h1><h3 id="当用户访问已经加入CDN服务的网站时，首先通过DNS重定向技术确定最接近用户的最佳CDN节点，同时将用户的请求指向该节点。当用户的请求到达指定节点时，CDN的服务器（节点上的高速缓存）负责将用户请求的内容提供给用户。"><a href="#当用户访问已经加入CDN服务的网站时，首先通过DNS重定向技术确定最接近用户的最佳CDN节点，同时将用户的请求指向该节点。当用户的请求到达指定节点时，CDN的服务器（节点上的高速缓存）负责将用户请求的内容提供给用户。" class="headerlink" title="当用户访问已经加入CDN服务的网站时，首先通过DNS重定向技术确定最接近用户的最佳CDN节点，同时将用户的请求指向该节点。当用户的请求到达指定节点时，CDN的服务器（节点上的高速缓存）负责将用户请求的内容提供给用户。"></a>当用户访问已经加入CDN服务的网站时，首先通过DNS重定向技术确定最接近用户的最佳CDN节点，同时将用户的请求指向该节点。当用户的请求到达指定节点时，CDN的服务器（节点上的高速缓存）负责将用户请求的内容提供给用户。</h3><h3 id="具体流程：用户在自己的浏览器中输入要访问的网站的域名，浏览器向本地DNS请求对该域名的解析，本地DNS将请求发到网站的主DNS，主DNS根据一系列的策略确定当时最适合的CDN节点，并将解析的结果（IP地址）发送给用户，用户向给定的CDN节点请求相应网站的内容。"><a href="#具体流程：用户在自己的浏览器中输入要访问的网站的域名，浏览器向本地DNS请求对该域名的解析，本地DNS将请求发到网站的主DNS，主DNS根据一系列的策略确定当时最适合的CDN节点，并将解析的结果（IP地址）发送给用户，用户向给定的CDN节点请求相应网站的内容。" class="headerlink" title="具体流程：用户在自己的浏览器中输入要访问的网站的域名，浏览器向本地DNS请求对该域名的解析，本地DNS将请求发到网站的主DNS，主DNS根据一系列的策略确定当时最适合的CDN节点，并将解析的结果（IP地址）发送给用户，用户向给定的CDN节点请求相应网站的内容。"></a>具体流程：用户在自己的浏览器中输入要访问的网站的域名，浏览器向本地DNS请求对该域名的解析，本地DNS将请求发到网站的主DNS，主DNS根据一系列的策略确定当时最适合的CDN节点，并将解析的结果（IP地址）发送给用户，用户向给定的CDN节点请求相应网站的内容。</h3><h3 id="由于用户访问源站业务有性能瓶颈，通过CDN技术把源站的内容缓存到多个节点。用户向源站域名发起请求时，请求会被调度至最接近用户的服务节点，直接由服务节点直接快速响应，有效降低用户访问延迟，提高可用性。"><a href="#由于用户访问源站业务有性能瓶颈，通过CDN技术把源站的内容缓存到多个节点。用户向源站域名发起请求时，请求会被调度至最接近用户的服务节点，直接由服务节点直接快速响应，有效降低用户访问延迟，提高可用性。" class="headerlink" title="由于用户访问源站业务有性能瓶颈，通过CDN技术把源站的内容缓存到多个节点。用户向源站域名发起请求时，请求会被调度至最接近用户的服务节点，直接由服务节点直接快速响应，有效降低用户访问延迟，提高可用性。"></a>由于用户访问源站业务有性能瓶颈，通过CDN技术把源站的内容缓存到多个节点。用户向源站域名发起请求时，请求会被调度至最接近用户的服务节点，直接由服务节点直接快速响应，有效降低用户访问延迟，提高可用性。</h3><h1 id="3-优势"><a href="#3-优势" class="headerlink" title="3.优势"></a>3.优势</h1><h3 id="（1）CDN节点解决了跨运营商和跨地域访问的问题，访问延时大大降低；"><a href="#（1）CDN节点解决了跨运营商和跨地域访问的问题，访问延时大大降低；" class="headerlink" title="（1）CDN节点解决了跨运营商和跨地域访问的问题，访问延时大大降低；"></a>（1）CDN节点解决了跨运营商和跨地域访问的问题，访问延时大大降低；</h3><h3 id="（2）大部分请求在CDN边缘节点完成，CDN起到了分流作用，减轻了源站的负载。"><a href="#（2）大部分请求在CDN边缘节点完成，CDN起到了分流作用，减轻了源站的负载。" class="headerlink" title="（2）大部分请求在CDN边缘节点完成，CDN起到了分流作用，减轻了源站的负载。"></a>（2）大部分请求在CDN边缘节点完成，CDN起到了分流作用，减轻了源站的负载。</h3><h1 id="4-CDN的相关技术"><a href="#4-CDN的相关技术" class="headerlink" title="4.CDN的相关技术"></a>4.CDN的相关技术</h1><h3 id="负载均衡技术"><a href="#负载均衡技术" class="headerlink" title="负载均衡技术"></a>负载均衡技术</h3><h3 id="动态内容分发与复制技术"><a href="#动态内容分发与复制技术" class="headerlink" title="动态内容分发与复制技术"></a>动态内容分发与复制技术</h3><h3 id="缓存技术"><a href="#缓存技术" class="headerlink" title="缓存技术"></a>缓存技术</h3><h1 id=""><a href="#" class="headerlink" title=""></a></h1>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+                <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2023 Hexo
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;John Doe
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+            </div>
+            
+            <transition name="fade">
+                <div id="preview" ref="preview" v-show="previewShow">
+                    <img id="preview-content" ref="previewContent" />
+                </div>
+            </transition>
+            
+        </div>
+        <script src="/js/main.js"></script>
+        
+        
+
+
+
+
+        
+    </body>
+</html>
