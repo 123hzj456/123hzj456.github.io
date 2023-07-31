@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>CMS识别 | Hexo</title>
+        <meta name="author" content="John Doe" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <link rel="icon" href="/images/favicon.png" />
+        <script src="https://cdn.staticfile.org/vue/3.3.4/vue.global.prod.min.js"></script>
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/6.4.0/css/all.min.css" />
+<link rel="stylesheet" href="/css/fonts.min.css" />
+<script> const mixins = {}; </script>
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+
+<script src="https://cdn.staticfile.org/highlight.js/11.8.0/highlight.min.js"></script>
+<script src="https://cdn.staticfile.org/highlightjs-line-numbers.js/2.8.0/highlightjs-line-numbers.min.js"></script>
+<link
+    rel="stylesheet"
+    href="https://cdn.staticfile.org/highlight.js/11.8.0/styles/github.min.css"
+/>
+<script src="/js/lib/highlight.js"></script>
+
+
+
+<script src="/js/lib/preview.js"></script>
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/main.css" />
+
+    <meta name="generator" content="Hexo 6.3.0"></head>
+    <body>
+        <div id="layout">
+            <transition name="fade">
+                <div id="loading" v-show="loading">
+                    <div id="loading-circle">
+                        <h2>LOADING</h2>
+                        <p>加载过慢请开启缓存 浏览器默认开启</p>
+                        <img src="/images/loading.gif" />
+                    </div>
+                </div>
+            </transition>
+            <div id="menu" :class="{ hidden: hiddenMenu, 'menu-color': menuColor}">
+    <nav id="desktop-menu">
+        <a class="title" href="/">
+            <span>HEXO</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;Home</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;About</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;Archives</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;Categories</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;Tags</span>
+        </a>
+        
+    </nav>
+    <nav id="mobile-menu">
+        <div class="title" @click="showMenuItems = !showMenuItems">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;HEXO</span>
+        </div>
+        <transition name="slide">
+            <div class="items" v-show="showMenuItems">
+                
+                <a href="/">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-house fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Home</div>
+                    </div>
+                </a>
+                
+                <a href="/about">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-id-card fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">About</div>
+                    </div>
+                </a>
+                
+                <a href="/archives">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-box-archive fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Archives</div>
+                    </div>
+                </a>
+                
+                <a href="/categories">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-bookmark fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Categories</div>
+                    </div>
+                </a>
+                
+                <a href="/tags">
+                    <div class="item">
+                        <div style="min-width: 20px; max-width: 50px; width: 10%">
+                            <i class="fa-solid fa-tags fa-fw"></i>
+                        </div>
+                        <div style="min-width: 100px; max-width: 150%; width: 20%">Tags</div>
+                    </div>
+                </a>
+                
+            </div>
+        </transition>
+    </nav>
+</div>
+<transition name="fade">
+    <div id="menu-curtain" @click="showMenuItems = !showMenuItems" v-show="showMenuItems"></div>
+</transition>
+
+            <div id="main" :class="loading ? 'into-enter-from': 'into-enter-active'">
+                <div class="article">
+    <div>
+        <h1>CMS识别</h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/7/31
+        </span>
+        
+        
+    </div>
+    
+    <div class="content" v-pre>
+        <h1 id="一-什么是CMS识别"><a href="#一-什么是CMS识别" class="headerlink" title="一.什么是CMS识别"></a>一.什么是CMS识别</h1><h3 id="CMS（Content-Management-System）即内容管理系统，是一个用于管理网站内容的软件。在互联网上，有很多不同的CMS，如WordPress-Joomla-Drupal等等。而CMS识别就是通过特定工具或脚本来判断目标网站所使用的CMS类型。"><a href="#CMS（Content-Management-System）即内容管理系统，是一个用于管理网站内容的软件。在互联网上，有很多不同的CMS，如WordPress-Joomla-Drupal等等。而CMS识别就是通过特定工具或脚本来判断目标网站所使用的CMS类型。" class="headerlink" title="CMS（Content Management System）即内容管理系统，是一个用于管理网站内容的软件。在互联网上，有很多不同的CMS，如	WordPress,Joomla,Drupal等等。而CMS识别就是通过特定工具或脚本来判断目标网站所使用的CMS类型。"></a>CMS（Content Management System）即内容管理系统，是一个用于管理网站内容的软件。在互联网上，有很多不同的CMS，如	WordPress,Joomla,Drupal等等。而CMS识别就是通过特定工具或脚本来判断目标网站所使用的CMS类型。</h3><h1 id="二-为什么需要批量CMS识别？"><a href="#二-为什么需要批量CMS识别？" class="headerlink" title="二.为什么需要批量CMS识别？"></a>二.为什么需要批量CMS识别？</h1><h3 id="在进行渗透测试或安全研究时，我们通常需要对大量网站进行扫描和分析。如果手动一个个去识别每个网站的CMS，工作量会非常大且效率低下。二通过批量CMS识别技术，可以快速准确地获取到目标网站所使用的CMS类型。"><a href="#在进行渗透测试或安全研究时，我们通常需要对大量网站进行扫描和分析。如果手动一个个去识别每个网站的CMS，工作量会非常大且效率低下。二通过批量CMS识别技术，可以快速准确地获取到目标网站所使用的CMS类型。" class="headerlink" title="在进行渗透测试或安全研究时，我们通常需要对大量网站进行扫描和分析。如果手动一个个去识别每个网站的CMS，工作量会非常大且效率低下。二通过批量CMS识别技术，可以快速准确地获取到目标网站所使用的CMS类型。"></a>在进行渗透测试或安全研究时，我们通常需要对大量网站进行扫描和分析。如果手动一个个去识别每个网站的CMS，工作量会非常大且效率低下。二通过批量CMS识别技术，可以快速准确地获取到目标网站所使用的CMS类型。</h3><h1 id="三-批量CMS识别工具有哪些"><a href="#三-批量CMS识别工具有哪些" class="headerlink" title="三.批量CMS识别工具有哪些"></a>三.批量CMS识别工具有哪些</h1><h3 id="优秀的批量CMS识别工具有：whatweb-w3af-CMSmap等等。这些工具都能通过自动化方式对目标网站进行快速识别，并返回响应的CMS类型信息。"><a href="#优秀的批量CMS识别工具有：whatweb-w3af-CMSmap等等。这些工具都能通过自动化方式对目标网站进行快速识别，并返回响应的CMS类型信息。" class="headerlink" title="优秀的批量CMS识别工具有：whatweb,w3af,CMSmap等等。这些工具都能通过自动化方式对目标网站进行快速识别，并返回响应的CMS类型信息。"></a>优秀的批量CMS识别工具有：whatweb,w3af,CMSmap等等。这些工具都能通过自动化方式对目标网站进行快速识别，并返回响应的CMS类型信息。</h3><h1 id="四-如何选择合适的批量CMS识别工具？"><a href="#四-如何选择合适的批量CMS识别工具？" class="headerlink" title="四.如何选择合适的批量CMS识别工具？"></a>四.如何选择合适的批量CMS识别工具？</h1><h3 id="在选择批量CMS识别工具时，需要考虑以下几个方面："><a href="#在选择批量CMS识别工具时，需要考虑以下几个方面：" class="headerlink" title="在选择批量CMS识别工具时，需要考虑以下几个方面："></a>在选择批量CMS识别工具时，需要考虑以下几个方面：</h3><h3 id="1-识别准确度：不同的工具对不同的CMS类型识别准确度有所差异，需要根据实际情况选择合适的工具。"><a href="#1-识别准确度：不同的工具对不同的CMS类型识别准确度有所差异，需要根据实际情况选择合适的工具。" class="headerlink" title="1.识别准确度：不同的工具对不同的CMS类型识别准确度有所差异，需要根据实际情况选择合适的工具。"></a>1.识别准确度：不同的工具对不同的CMS类型识别准确度有所差异，需要根据实际情况选择合适的工具。</h3><h3 id="2-使用难度：一些工具除了能够进行CMS识别外，还拥有其他丰富的功能，如漏洞扫描，渗透测试等等。"><a href="#2-使用难度：一些工具除了能够进行CMS识别外，还拥有其他丰富的功能，如漏洞扫描，渗透测试等等。" class="headerlink" title="2.使用难度：一些工具除了能够进行CMS识别外，还拥有其他丰富的功能，如漏洞扫描，渗透测试等等。"></a>2.使用难度：一些工具除了能够进行CMS识别外，还拥有其他丰富的功能，如漏洞扫描，渗透测试等等。</h3><h1 id="五-如何进行批量CMS识别"><a href="#五-如何进行批量CMS识别" class="headerlink" title="五.如何进行批量CMS识别"></a>五.如何进行批量CMS识别</h1><h3 id="批量CMS识别通常可以通过两种方式来实现："><a href="#批量CMS识别通常可以通过两种方式来实现：" class="headerlink" title="批量CMS识别通常可以通过两种方式来实现："></a>批量CMS识别通常可以通过两种方式来实现：</h3><h3 id="1-基于字典的暴力破解："><a href="#1-基于字典的暴力破解：" class="headerlink" title="1.基于字典的暴力破解："></a>1.基于字典的暴力破解：</h3><h3 id="将事先准备好的CMS类型字典与目标网站进行对比，从而确定其所使用的CMS类型。"><a href="#将事先准备好的CMS类型字典与目标网站进行对比，从而确定其所使用的CMS类型。" class="headerlink" title="将事先准备好的CMS类型字典与目标网站进行对比，从而确定其所使用的CMS类型。"></a>将事先准备好的CMS类型字典与目标网站进行对比，从而确定其所使用的CMS类型。</h3><h3 id="2-基于特征码匹配："><a href="#2-基于特征码匹配：" class="headerlink" title="2.基于特征码匹配："></a>2.基于特征码匹配：</h3><h3 id="通过分析目标网站返回的响应包，判断其是否包含特定的CMS类型特征码，从而确定其所使用的CMS类型。"><a href="#通过分析目标网站返回的响应包，判断其是否包含特定的CMS类型特征码，从而确定其所使用的CMS类型。" class="headerlink" title="通过分析目标网站返回的响应包，判断其是否包含特定的CMS类型特征码，从而确定其所使用的CMS类型。"></a>通过分析目标网站返回的响应包，判断其是否包含特定的CMS类型特征码，从而确定其所使用的CMS类型。</h3><p><img src="https://raw.githubusercontent.com/123hzj456/tuku/main/img/202307311619217.jpg" alt="89C8CB6AE21FA25A38F18FA0D1A5705C"></p>
+<h1 id="六-批量CMS识别技术的应用场景有哪些？"><a href="#六-批量CMS识别技术的应用场景有哪些？" class="headerlink" title="六.批量CMS识别技术的应用场景有哪些？"></a>六.批量CMS识别技术的应用场景有哪些？</h1><h3 id="批量CMS识别技术可以广泛应用于以下场景："><a href="#批量CMS识别技术可以广泛应用于以下场景：" class="headerlink" title="批量CMS识别技术可以广泛应用于以下场景："></a>批量CMS识别技术可以广泛应用于以下场景：</h3><h3 id="1漏洞扫描：通过识别目标网站所使用的CMS类型，可以更好地发现其存在的漏洞。"><a href="#1漏洞扫描：通过识别目标网站所使用的CMS类型，可以更好地发现其存在的漏洞。" class="headerlink" title="1漏洞扫描：通过识别目标网站所使用的CMS类型，可以更好地发现其存在的漏洞。"></a>1漏洞扫描：通过识别目标网站所使用的CMS类型，可以更好地发现其存在的漏洞。</h3><h3 id="2-威胁情报收集：通过对大量网站进行扫描和分析，可以获取到丰富的威胁情报信息。"><a href="#2-威胁情报收集：通过对大量网站进行扫描和分析，可以获取到丰富的威胁情报信息。" class="headerlink" title="2.威胁情报收集：通过对大量网站进行扫描和分析，可以获取到丰富的威胁情报信息。"></a>2.威胁情报收集：通过对大量网站进行扫描和分析，可以获取到丰富的威胁情报信息。</h3><h3 id="3-安全研究：通过对不同CMS类型的分析和研究，可以更好地了解其安全性及存在的漏洞。"><a href="#3-安全研究：通过对不同CMS类型的分析和研究，可以更好地了解其安全性及存在的漏洞。" class="headerlink" title="3.安全研究：通过对不同CMS类型的分析和研究，可以更好地了解其安全性及存在的漏洞。"></a>3.安全研究：通过对不同CMS类型的分析和研究，可以更好地了解其安全性及存在的漏洞。</h3><h1 id="七-如何提高批量CMS识别技术的准确度？"><a href="#七-如何提高批量CMS识别技术的准确度？" class="headerlink" title="七.如何提高批量CMS识别技术的准确度？"></a>七.如何提高批量CMS识别技术的准确度？</h1><h3 id="具体有以下方面："><a href="#具体有以下方面：" class="headerlink" title="具体有以下方面："></a>具体有以下方面：</h3><h3 id="1-不断更新字典库，以包含更多最新的CMS类型信息。"><a href="#1-不断更新字典库，以包含更多最新的CMS类型信息。" class="headerlink" title="1.不断更新字典库，以包含更多最新的CMS类型信息。"></a>1.不断更新字典库，以包含更多最新的CMS类型信息。</h3><h3 id="2-优化特征码匹配规则，以更好地判断目标网站所使用的CMS类型。"><a href="#2-优化特征码匹配规则，以更好地判断目标网站所使用的CMS类型。" class="headerlink" title="2.优化特征码匹配规则，以更好地判断目标网站所使用的CMS类型。"></a>2.优化特征码匹配规则，以更好地判断目标网站所使用的CMS类型。</h3><h3 id="3-结合其他信息收集工具和技术，如Whois查询，IP反查等等，以提高识别准确度。"><a href="#3-结合其他信息收集工具和技术，如Whois查询，IP反查等等，以提高识别准确度。" class="headerlink" title="3.结合其他信息收集工具和技术，如Whois查询，IP反查等等，以提高识别准确度。"></a>3.结合其他信息收集工具和技术，如Whois查询，IP反查等等，以提高识别准确度。</h3><h1 id="八-如何防范批量CMS识别带来的安全威胁？"><a href="#八-如何防范批量CMS识别带来的安全威胁？" class="headerlink" title="八.如何防范批量CMS识别带来的安全威胁？"></a>八.如何防范批量CMS识别带来的安全威胁？</h1><h3 id="为了防范批量CMS识别带来安全威胁，可以从以下几个方面入手："><a href="#为了防范批量CMS识别带来安全威胁，可以从以下几个方面入手：" class="headerlink" title="为了防范批量CMS识别带来安全威胁，可以从以下几个方面入手："></a>为了防范批量CMS识别带来安全威胁，可以从以下几个方面入手：</h3><h3 id="1-及时更新CMS版本，修复已知漏洞。"><a href="#1-及时更新CMS版本，修复已知漏洞。" class="headerlink" title="1.及时更新CMS版本，修复已知漏洞。"></a>1.及时更新CMS版本，修复已知漏洞。</h3><h3 id="2-加强访问控制，限制未授权访问。"><a href="#2-加强访问控制，限制未授权访问。" class="headerlink" title="2.加强访问控制，限制未授权访问。"></a>2.加强访问控制，限制未授权访问。</h3><h3 id="3-防范基于字典的暴力破解攻击，如设置登录失败次数限制等等。"><a href="#3-防范基于字典的暴力破解攻击，如设置登录失败次数限制等等。" class="headerlink" title="3.防范基于字典的暴力破解攻击，如设置登录失败次数限制等等。"></a>3.防范基于字典的暴力破解攻击，如设置登录失败次数限制等等。</h3>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+                <footer id="footer">
+    <div id="footer-wrap">
+        <div>
+            &copy;
+            2022 - 2023 Hexo
+            <span id="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            &commat;John Doe
+        </div>
+        <div>
+            Based on the <a target="_blank" rel="noopener" href="https://hexo.io">Hexo Engine</a> &amp;
+            <a target="_blank" rel="noopener" href="https://github.com/theme-particlex/hexo-theme-particlex">ParticleX Theme</a>
+        </div>
+        
+    </div>
+</footer>
+
+            </div>
+            
+            <transition name="fade">
+                <div id="preview" ref="preview" v-show="previewShow">
+                    <img id="preview-content" ref="previewContent" />
+                </div>
+            </transition>
+            
+        </div>
+        <script src="/js/main.js"></script>
+        
+        
+
+
+
+
+        
+    </body>
+</html>
