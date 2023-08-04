@@ -164,6 +164,356 @@
         
 
 <div class="post">
+    <a href="/2023/07/27/%E9%87%8D%E8%A6%81%E7%AB%AF%E5%8F%A3%E5%8F%8A%E6%9C%8D%E5%8A%A1%E9%80%9F%E6%9F%A5/">
+        <h2 class="post-title">重要端口及服务</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/7/27
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h1 id="重要端口及服务"><a href="#重要端口及服务" class="headerlink" title="重要端口及服务"></a>重要端口及服务</h1><table>
+<thead>
+<tr>
+<th>port</th>
+<th>service</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>21</td>
+<td>FTP</td>
+<td>FTP控制端口，检查匿名登录、弱口令</td>
+</tr>
+<tr>
+<td>22</td>
+<td>SSH</td>
+<td>SSH远程登录协议，检查弱口令</td>
+</tr>
+<tr>
+<td>23</td>
+<td>Telnet</td>
+<td>Telnet终端仿真协议</td>
+</tr>
+<tr>
+<td>53</td>
+<td>DNS服务</td>
+<td></td>
+</tr>
+<tr>
+<td>80</td>
+<td>Web</td>
+<td>检查常见Web漏洞及管理后台</td>
+</tr>
+<tr>
+<td>111</td>
+<td>NFS</td>
+<td>网络文件系统</td>
+</tr>
+<tr>
+<td>389</td>
+<td>LDAP</td>
+<td>轻型目录访问协议，检查是否存在匿名访问</td>
+</tr>
+<tr>
+<td>443</td>
+<td>OpenSSL</td>
+<td>检查心脏滴血及Web漏洞</td>
+</tr>
+<tr>
+<td>445</td>
+<td>SMB</td>
+<td>检查是否存在MS17-010、MS08-067漏洞</td>
+</tr>
+<tr>
+<td>512</td>
+<td>Rexec</td>
+<td>检查远程shell命令及暴力破解</td>
+</tr>
+<tr>
+<td>873</td>
+<td>Rsync</td>
+<td>检查匿名登录、弱口令</td>
+</tr>
+<tr>
+<td>1433</td>
+<td>SQL Server</td>
+<td>数据库服务</td>
+</tr>
+<tr>
+<td>1521</td>
+<td>Oracle</td>
+<td>数据库服务</td>
+</tr>
+<tr>
+<td>2049</td>
+<td>NFS</td>
+<td>NFS未授权访问</td>
+</tr>
+<tr>
+<td>2181</td>
+<td>Zookeeper</td>
+<td>分布式协调系统</td>
+</tr>
+<tr>
+<td>2375</td>
+<td>Docker Remote</td>
+<td>API未授权访问</td>
+</tr>
+<tr>
+<td>3306</td>
+<td>MySQL</td>
+<td>数据库服务</td>
+</tr>
+<tr>
+<td>3389</td>
+<td>RDP</td>
+<td>远程桌面</td>
+</tr>
+<tr>
+<td>4848</td>
+<td>GlassFish</td>
+<td>未授权访问</td>
+</tr>
+<tr>
+<td>5432</td>
+<td>PostgreSQL</td>
+<td>数据库服务</td>
+</tr>
+<tr>
+<td>5601</td>
+<td>Kibana</td>
+<td>开源分析及可视化平台</td>
+</tr>
+<tr>
+<td>5672</td>
+<td>RabbitMQ</td>
+<td>开源消息队列服务软件</td>
+</tr>
+<tr>
+<td>5900</td>
+<td>VNC</td>
+<td>远程桌面控制软件，检查弱口令</td>
+</tr>
+<tr>
+<td>5984</td>
+<td>CouchDB</td>
+<td>数据库服务</td>
+</tr>
+<tr>
+<td>6379</td>
+<td>Redis</td>
+<td>数据库服务</td>
+</tr>
+<tr>
+<td>7001</td>
+<td>Weblogic</td>
+<td>Weblogic Console默认端口</td>
+</tr>
+<tr>
+<td>8000-9090</td>
+<td>Web</td>
+<td>常见Web端口，运维一般将管理后台开在这些非80端口上</td>
+</tr>
+<tr>
+<td>8080</td>
+<td>Jenkins</td>
+<td></td>
+</tr>
+<tr>
+<td>8080</td>
+<td>Kubernetes Api Server</td>
+<td></td>
+</tr>
+<tr>
+<td>8081</td>
+<td>Apache-Flink</td>
+<td></td>
+</tr>
+<tr>
+<td>8089</td>
+<td>Druid</td>
+<td></td>
+</tr>
+<tr>
+<td>8090</td>
+<td>Confluence</td>
+<td></td>
+</tr>
+<tr>
+<td>8095</td>
+<td>Atlassian Crowd</td>
+<td></td>
+</tr>
+<tr>
+<td>8161</td>
+<td>Active MQ</td>
+<td></td>
+</tr>
+<tr>
+<td>8888</td>
+<td>Jupyter Notebook</td>
+<td></td>
+</tr>
+<tr>
+<td>8983</td>
+<td>Solr</td>
+<td></td>
+</tr>
+<tr>
+<td>9000</td>
+<td>Fast-CGI</td>
+<td>对外访问可直接Get shell</td>
+</tr>
+<tr>
+<td>9060</td>
+<td>Websephere</td>
+<td>管理端口</td>
+</tr>
+<tr>
+<td>9092</td>
+<td>Kafka</td>
+<td>开源流处理平台</td>
+</tr>
+<tr>
+<td>9200</td>
+<td>Elasticsearch(http)</td>
+<td>全文搜索引擎</td>
+</tr>
+<tr>
+<td>9300</td>
+<td>Elasticsearch(tcp)</td>
+<td>全文搜索引擎</td>
+</tr>
+<tr>
+<td>10000</td>
+<td>Virualmin&#x2F;Webmin</td>
+<td>服务器虚拟主机管理系统</td>
+</tr>
+<tr>
+<td>10051</td>
+<td>Zabbix</td>
+<td>监控系统</td>
+</tr>
+<tr>
+<td>11211</td>
+<td>Memcache</td>
+<td>分布式高速缓存系统，检查未授权访问</td>
+</tr>
+<tr>
+<td>20880</td>
+<td>Dubbo</td>
+<td>阿里巴巴开源分布式服务框架</td>
+</tr>
+<tr>
+<td>27017</td>
+<td>MongoDB</td>
+<td>数据库服务</td>
+</tr>
+<tr>
+<td>28017</td>
+<td>MongoDB</td>
+<td>数据库服务（统计页面）</td>
+</tr>
+<tr>
+<td>50030</td>
+<td>Hadoop Hive</td>
+<td></td>
+</tr>
+<tr>
+<td>50070</td>
+<td>Hadoop</td>
+<td></td>
+</tr>
+</tbody></table>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+    </div>
+    <a href="/2023/07/27/%E9%87%8D%E8%A6%81%E7%AB%AF%E5%8F%A3%E5%8F%8A%E6%9C%8D%E5%8A%A1%E9%80%9F%E6%9F%A5/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2023/07/26/test-my-site/">
+        <h2 class="post-title">test_my_site</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/7/26
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+    </div>
+    <a href="/2023/07/26/test-my-site/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
+    <a href="/2023/07/26/%E5%A6%82%E4%BD%95%E5%B0%86%E5%9B%BE%E7%89%87%E5%8F%91%E9%80%81%E5%88%B0%E5%8D%9A%E5%AE%A2%E4%B8%AD/">
+        <h2 class="post-title">如何将图片上传至博客</h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <i class="fa-solid fa-calendar fa-fw"></i>
+            </span>
+            2023/7/26
+        </span>
+        
+        
+    </div>
+    <div class="description">
+        <div class="content" v-pre>
+            
+            <h3 id="准备工具：下载软件PICGO"><a href="#准备工具：下载软件PICGO" class="headerlink" title="准备工具：下载软件PICGO"></a>准备工具：下载软件PICGO</h3><h5 id="1-将软件设置为时间重命名"><a href="#1-将软件设置为时间重命名" class="headerlink" title="1.将软件设置为时间重命名"></a>1.将软件设置为时间重命名</h5><h5 id="2-图床设置为Github"><a href="#2-图床设置为Github" class="headerlink" title="2.图床设置为Github"></a>2.图床设置为Github</h5><h5 id="3-配置GIThub"><a href="#3-配置GIThub" class="headerlink" title="3.配置GIThub"></a>3.配置GIThub</h5><p><img src="https://raw.githubusercontent.com/123hzj456/tuku/main/img/202307311549401.png" alt="image-20230727165325349"></p>
+<p>仓库名为GitHub用户名&#x2F;存储仓库名</p>
+<p>分支固定为Main</p>
+<p>token设置方法为：</p>
+<p>在GitHub页面点开设置-&gt;左侧最后一栏-&gt;第三栏第2个–&gt;新建一个密钥复制Token 值粘贴到该位置</p>
+<p>存储路径：在本地新建一个文件用于存储图片并将文件名写入该栏内</p>
+<p>最后保存即可</p>
+<h4 id="5-设置typora文件"><a href="#5-设置typora文件" class="headerlink" title="5.设置typora文件"></a>5.设置typora文件</h4><h4 id="在typora文件设置中"><a href="#在typora文件设置中" class="headerlink" title="在typora文件设置中"></a>在typora文件设置中</h4><p><img src="https://raw.githubusercontent.com/123hzj456/tuku/main/img/202307311549868.png" alt="image-20230731143450447"></p>
+<p>进行如上设置，验证图片上传后显示成功即完成</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        
+    </div>
+    <a href="/2023/07/26/%E5%A6%82%E4%BD%95%E5%B0%86%E5%9B%BE%E7%89%87%E5%8F%91%E9%80%81%E5%88%B0%E5%8D%9A%E5%AE%A2%E4%B8%AD/" class="go-post">阅读全文</a>
+</div>
+
+<div class="post">
     <a href="/2023/07/26/%E8%AE%BE%E7%BD%AE%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BB%A3%E7%90%86/">
         <h2 class="post-title">使用代理</h2>
     </a>
